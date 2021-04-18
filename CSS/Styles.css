@@ -143,12 +143,66 @@ p {
   color: hsl(229, 57%, 11%);
 }
 
-.storage-left p {
-  font-size: 1.3rem;
-  color: hsl(240, 1%, 65%);
+.storage-left p:nth-child(1) {
+  font-size: 3rem;
+  color: hsl(229, 57%, 11%);
   padding-left: 1rem;
+  font-weight: 600;
 }
 
+@media screen and (min-width: 1024px) {
+  .storage-used .highlight {
+    font-size: 1rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100vh;
+    justify-items: start;
+    align-items: center;
+  }
+  .container {
+    margin: 5rem 0;
+    margin-left: 20rem;
+  }
+
+  .storage-container {
+    margin: 5rem 0;
+    width: 80%;
+  }
+
+  .slider-dot {
+    left: 233px;
+  }
+
+  .storage-left {
+    top: -130px;
+    left: 230px;
+    height: 80px;
+    border-radius: 10% 10% 0% 20%;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      100% 74%,
+      100% 100%,
+      88% 75%,
+      0% 75%
+    );
+
+    align-items: flex-start;
+  }
+
+  .storage-left p {
+    margin-top: 1rem;
+  }
+
+  .storage-left p:nth-child(2) {
+    margin-top: 2.3rem;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+  }
+}
 /* colors
 
 - Pale Blue: hsl(243, 100%, 93%)
