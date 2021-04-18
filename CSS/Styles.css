@@ -1,46 +1,57 @@
-.card {
-  width: 300px;
+/* 62.5% * 16px = 10px */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: url(/images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin: 1.5rem auto;
+  margin-top: 10rem;
+  width: 270px;
+  height: 180px;
+  background-color: hsl(228, 53%, 29%);
+  border-radius: 5% 30% 5% 5%; /* left, right , bottom-right, bottom-left */
+}
+
+.storage-container {
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: hsl(228, 53%, 29%);
+  border-radius: 15px;
+}
+
+.logo-img {
+  margin: 3rem;
+  width: 130px;
+}
+
+.icon {
+  background-color: hsl(229, 57%, 11%);
+  border: 10px solid hsl(229, 57%, 11%);
+}
+.img-document {
   position: relative;
-  left: 50px;
-  top: 20px;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0 20px 30px gainsboro;
-  transform: rotate(-5deg);
+  left: -150px;
+  top: 10px;
 }
 
-#header {
-  margin: 20px;
-}
-#footer {
-  display: flex;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(to right, #c92e97, #6021ff);
-  text-align: center;
+.img-folder {
 }
 
-img {
-  margin-top: 5px;
-  margin-left: 10px;
-  width: 50px;
-  height: 50px;
-  border: solid 5px white;
-  border-radius: 60px;
-  object-fit: fill;
+.img-upload {
 }
 
-p {
-  margin-left: 20px;
-  padding-top: 5px;
-  color: white;
-}
+/* colors
 
-.card:hover {
-  transform: rotate(0deg);
-  transition: transform 1s;
-}
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%)
 
-img:hover {
-  transform: scale(1.15);
-}
+*/
