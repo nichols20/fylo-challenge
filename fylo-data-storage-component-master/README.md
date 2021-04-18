@@ -1,1 +1,11 @@
 #recreate this style on mobile and desktop using the logo and image files provided
+
+
+
+
+My solution
+
+
+
+![image](https://user-images.githubusercontent.com/82775867/115165411-cdda7600-a07b-11eb-87fb-0fe0ea6f2b36.png)
+
