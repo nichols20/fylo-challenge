@@ -1,0 +1,189 @@
+BASIC SELECTORS: 
+Type,Id,Class, and Attribute
+
+SPAN ARE IN LINE ELEMENTS YOU CANNOT GIVE IT A CUSTOMED WIDTH/ HEIGHT UNLESS YOU CHANGE THE DISPLAY TO INLINE-BLOCK
+
+RELATIONAL SELECTORS: 
++"whatever element after selected id" ~"all elements after" ^"The one before selected id" 
+(regular ex.p)"type the element and it will select all of the same types that are within the selected id"
+
+<article>: contain any independent self contained piece of content like a tweet
+
+*Block level elements begin on a new line
+*An element can multiple classes seperated by a space
+*fr is a unit that stands for fraction of available space and should be used as an alternative to percentages when setting 
+the sizes of rows and columns
+*[:nth-of-type()] which selects the number of occurence of whatever selector this property is attached to 
+Ex. .box:nth-of-type(2) will select the second occurence of the .box class  
+* for changing font size for printers you want to use the pt unit and for changing padding and margins you want to use cm/in
+
+PSUEDO-CLASS SELECTORS: 
+(:first-child)"The first child element of the selected type is affected"
+(:first-of-type)"The first appearences of each owns tpyes within the selected type ex:<h2> <p>... are selected and changed
+you can change this and only alter a specific first of type if you write the element in front of it ex.p:first-of-type
+(:last-of-type)"the opposite of first of type same rules apply" 
+(:last-child)"the opposite of first child same rules apply"
+(:nth-child())"usually used in a list, more like a function selector, in the parenthesis you can type odd/even to select only 
+any even or add variable. you can also input 3n to target every 3rd element
+(:visited, :link, :hover) visited and link only apply to hyper links, they change the design of the link at default before
+the link has been interacted with as well as when "visited" A.K.A when clicked. :hover can be used for almost any type of 
+element and should always be written with a :focus for users that use the tab key. The hover functions changes the design of 
+the selected variable whenever the mouse hovers over the object.
+
+PSUEDO ELEMENT SELECTORS:
+*You use :: for Psuedo Elements and : for Psuedo Classes. Psuedo elements are used when you're Styiling part of an element
+and Psuedo Classes are used for Styling elements in a particular state. (::first-letter/::first-line) Selects and styles 
+the first letter in the selected element. Selects and styles the first line of characters in a selected element
+(::selection) Allows you to stylize the background when highlighting objects.
+(::after/::before) using content: in this function allows you to impliment content before the content of the selected element
+the same goes for ::after.you can change the display: to make it a blocklevel element thus taking up the entire line of space
+by typing (display:block;)
+
+Selectors Specificity:
+when two different functions target an element the browser will choose whichever function target is most specific. 
+Ex. an element with an Id will be the most specific because you cannot have multiple elements with the same id. the next to
+follow would be class and attributes because you can have multiple elemnts with the same class it's not as specific.
+and the last in the chain would be element selector(type:h1,p,article....) this because you can have multiple elements of 
+the same type. (!important) Using this keyword will nulify any functions that would normally overrule the selected function
+your applying it to. 
+
+COLORS:
+There are multiple ways to Select color in css, you can use(Named Colors-color:red) (rgb-rgb(250,116,70)) 
+(HSL-hsl(215°, 43%, 49%)remove degree character) (Hexadecimal-#4774b3) for hsl and rgb you can add an a at the end of the 
+function label which then enables you to add a fourth value ranging from decimals 0-1 which changes the opacity of a color.
+
+GRADIENTS:
+Allows a transition of two or more colors. cannot use background color property to use gradients you write background-image:
+or just background: then input (linear-gradient(any colors using rgb,hsl...)) you can customize the positioning of the
+colors by using to right, to bottom right... or degrees 45deg,90deg.. You can also add a percentage at the end of the written
+color (dodgerblue 30%) which specifies when the color should begin (radial-gradient) this function works the same as 
+linear-gradient however to change positioning of the color start and end you cannot use degrees only at top left, at left..
+
+BORDERS:
+Borders take in three values 10px-determine how thick the border will be, Solid/dotted/dashed, determines the type of border
+and the finally whatever color you decide the border to be. you can use the function by typing border: or be more specific
+border-top: border-left: and so on. (border: 10px solid royalblue) order placement of these lines matter. There's also 
+border-width: that changes the width of all sides of the border. first value-width of top border 2nd width of right 
+3rd width of bottom 4th width of left (border-radius:) Allows you to make the border more round *Css shapes is
+a glossary of all shapes you can make on css which you can find online through google.
+
+SHADOWS:
+(box-shadow:)
+
+BOX MODEL: The invisible area that surronds the selected content/element. This model can be seen through *Inspect on your
+internet browser, the size can also be manipulated through CSS. To edit the padding write(padding:) then you can insert
+4 values that alter the size top, right, bottom, left. *Use the margin propety to seperate elements, and the padding property
+to add space between the border and content area. 
+
+OVERFLOW: occurs when there's too much content in the box range and proceeds to extend past the given area. By default
+the overflow: ; property is set to visible you can change this to hidden to hide any extending content or scroll which
+allows you to scroll down the content area to see all elements present. or even use the term auto which only displays
+the scroll bar when overflow is present(seems like this should be the alternative to any use of scroll) the overflow:
+method is a combined element of overlow-y and overflow-x using these seperately allows you to have more control of the 
+overflow content present.this can also be done by adding two variables in the Overflow: element (Ex. Overflow: hidden auto;)
+
+MEASUREMENT UNITS: measurement units fall into two categories, Absolute and Relative. Absolute units are always fixed(pixel
+point, inches,centimeters,and milimeters) Relative units are relative to something else(% relative to the size of the 
+container, VW[viewport height] and VH[viewport width] which are relative to the viewport, and EM and REM which are relevant 
+to the font size)
+
+*In line elements don't respect the height and width properties, to give them a width and height we have to set their 
+display: to inline-block;
+
+Z-INDEX: There are three kinds of axises the Horizontal(x-axis), Vertical(Y-axis), and finally the (Z-axis) which represents
+depth. the z-index by default is always set to 0, you can change this value and add a positive or negative value to move
+it closer(positive) or farther(negative).
+
+POSITIONING:*by default the position: of all elements is static; to move the positioning of an element you'd first type 
+relative then underneath you can type left/right/top/bottom and implement a positive or negative value depending on how far 
+you'd like to move your element. You can use whatever form of units you'd like depending on the scenario you're working 
+on. There are two types of positioning The first which i just explained with the Z-index and units is 
+(Relative and then theres Absolute positioning and fixed positioning) In contrast where relative positioning is moved 
+relative to its normal spot Absolute positioning is moved relative to its container.**If you wish to move an element relative
+to its container the containers position: must first be set to relative. when giving an element an absolute position that 
+element no longer exists in the previous layer all elements present in that layer are then rendered as if the absolute 
+element was never there and the absolute element is then made into a new layer. Fixed positioning makes an element relevant
+to the viewport of a browser.
+
+FLOATING ELEMENTS: when giving an element the function of float: you can have the element float to the right or left side 
+of the container. This will move the element in either way then all elements following will then move and float around the 
+floating element. if you wish for some elements to not float around the specified element this is when you'd use the clear:
+function. when using the clear: function you'd set it to either right ot left this depends on whether your floating element
+is floating right or left. you can even use the term both if you have multiple elements floating right and left.*By default 
+parent elements don't see floated elements. This can cause a float collapse. to solve an issue like this you'd want to make
+a function with the after element ex. .clearfix::after{} then type in content:'' display:block; so that you change the inline
+into a block level element and then clear:both;
+
+FLEX: using Flex allows you to layout a bundle of elements in one direction either in a row or in a column. you can control
+the direction by using the flex-direction property, the default value for this property is row but you can set it to column
+or column reverse which is an inverted version of column and row reverse when the boxes are moved to the right and the order
+is inverted. Now to allign items you need to use *Axes, there are two types of axes the main(primary axis) and the cross
+(secondary Axis) These axis are dependent on the direction. Setting the direction to row(direction:row;) will make the main 
+axis go in the horizontal axis and the cross on the vertical axis, and by setting direction to column(direction:column;)
+these roles would be reversed. There are two properties you must use to align, (justify-content) to align items
+on the main axis, and (align-items) to align items on the cross axis. The default value for justify-content is 
+flex-start starting the items at the beginning of the horizontal axis you can change this to flex-end and move the items
+to the end of the horizontal axis. and center to have items centered in the midddle of the horizontal axis. you can use
+the order (space-evenly) which spaces your elements evenly on the horixontal axis, There is space-between which pushes the
+first and last items to the beginning and end of the horizontal axis then puts space between those elements and any other 
+elements that are in that axis. To change the alignment of one element you'd want to use (align-self) this property is used
+on a flex item and not a flex container. you can use flex-start and flex-end in align-self to allign the element up or down
+
+*The default value of flex-wrap is no wrap yiu ca change it to wrap to move elements onto another line so they all keep their
+original size leaving it on no wrap keeps all elements on the same line but can alter size if too many are present
+*Align content only works if you have multiple lines in a flex container
+
+SIZING: There a multiple properties you can use to change the sizing of an item using flex. (flex-basis) this property
+allows you to change the initial size of a flex item. (flex-grow) which changes the growth factor, (Flex-shrink) which
+changes the shrink factor, and (flex) which is a combination of all three. *All of these properties should be used on flex 
+items and not flex containers.
+
+(flex-basis) is naturally in auto which means it takes the value of the initial width or height. by giving it a value it will
+change it's size of either the width or height. if you have your flex direction to row it will change the value of the width
+and if the direction is set to column it will change the value of the items height.
+
+(FLEX-GROW/FLEX-SHRINK) These properties are naturally set to 0, and by giving them a value of 1 or higher they will begin
+to grow or shrink to allocate/recalibrate any open space or lack of open space. 
+
+(FLEX) This property is a combination of all three properties above. you can give this property anywhere from 1 to 3 values
+(grow, shrink, basis) the first value will always be grow but you can change the second value to basis and null shrink
+by giving the second value a unit of measurement EX. (1, 15rem)
+
+(GRID) where Flexbox controls the layouts of elements in either a row or a column GRID has the capability of laying out 
+elements in both rows and columns. To first define a grid you need a container using the display:grid; property. to create
+a grid with a certain amount of rows and columns (Ex. 3x2) you can use the (grid-template-rows: 100px 100px 100px;) property
+and the (grid-template-columns: 100px 100px;) property to make a 3x2 grid. you can make this code shorter by instead of 
+typing out the individiual dimensions multiple times you can type repeat(3, 100px) as a subsitute for both properties.
+you can make this code shorter by just using the (grid-template) which is a combination of both the row and column property
+then typing repeat(3, 100px) / repeat(2,100px); to make your 3x2 grid. To apply a GAP between rows and columns there are 
+three properties (ROW-GAP, COLUMN-GAP, and GAP) 
+
+PLACING ITEMS- There are three properties for placing items in a grid [GRID-ROW, GRID-COLUMN, and GRID-AREA*combination of 2]
+
+HIDING ELEMENTS-you can use the display: property and set it to none which will then hide the element this property is 
+applied to and will act as if the element was never there, Using the visibility: property you can set this property to hidden
+hiding the selected element however the space that was taken up when the element was visible will still remain
+
+MEDIA QUERIES-
+
+IMAGE TYPES- (RASTER) raster images come from cameras/scanners, Formats JPG,PNG,GIF, etc more pixels = larger file size
+look blury if scaled up. RASTER IMAGE FORMATS- JPEG(16m colors) GIF(256 colors, transparency, animation)
+PNG(16m colors, Transparency, Animation) Webp(16m colors, transparency, animation)
+
+(VECTOR) Created in software(illustrator) FORMAt:svg svg= scalable vector graphics, look sharp at any size.
+
+Physical Resolution 
+
+Logical Resolution 
+
+Device Pixel ratio(DPR)
+
+High density screen>dpr1
+
+*SVGBACKGROUNDS.com
+
+
+
+
+
+

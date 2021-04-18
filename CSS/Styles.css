@@ -1,0 +1,46 @@
+.card {
+  width: 300px;
+  position: relative;
+  left: 50px;
+  top: 20px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 30px gainsboro;
+  transform: rotate(-5deg);
+}
+
+#header {
+  margin: 20px;
+}
+#footer {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #c92e97, #6021ff);
+  text-align: center;
+}
+
+img {
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  border: solid 5px white;
+  border-radius: 60px;
+  object-fit: fill;
+}
+
+p {
+  margin-left: 20px;
+  padding-top: 5px;
+  color: white;
+}
+
+.card:hover {
+  transform: rotate(0deg);
+  transition: transform 1s;
+}
+
+img:hover {
+  transform: scale(1.15);
+}
