@@ -7,15 +7,16 @@ body {
   background: url(/images/bg-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .container {
   margin: 1.5rem auto;
-  margin-top: 10rem;
+  margin-top: 20rem;
   width: 270px;
-  height: 180px;
+  height: 160px;
   background-color: hsl(228, 53%, 29%);
-  border-radius: 5% 30% 5% 5%; /* left, right , bottom-right, bottom-left */
+  border-radius: 5% 38% 8% 5%; /* left, right , bottom-right, bottom-left */
 }
 
 .storage-container {
@@ -34,6 +35,8 @@ body {
 
 .icon-layout {
   display: flex;
+
+  margin-left: 3rem;
 }
 
 .icon {
@@ -41,10 +44,11 @@ body {
 }
 
 .icon-container {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: hsl(229, 57%, 11%);
-  margin: 2rem;
+  margin: 1.4rem;
+  margin-right: 0;
   border-radius: 10px;
   display: flex;
   justify-content: center;
